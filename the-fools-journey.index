@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>THE FOOLS JOURNEY</name>
+		<description>Homebrew content for THE FOOLS JOURNEY campaign.</description>
+		<update version="0.0.1">
+			<file name="the-fools-journey.index" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/the-fools-journey.index" />
+		</update>
+	</info>
+	<files>
+		<file name="tfj-source.xml" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/tfj-source.xml" />
+		<file name="tfj-magic-items.xml" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/tfj-magic-items.xml" />
+	</files>
+</index>

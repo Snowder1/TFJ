@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>THE FOOLS JOURNEY - Source</name>
+		<description>The source that all THE FOOLS JOURNEY homebrew content belongs to.</description>
+		<update version="0.0.1">
+			<file name="tfj-source.xml" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/tfj-source.xml" />
+		</update>
+	</info>
+
+	<element name="THE FOOLS JOURNEY" type="Source" source="Homebrew" id="ID_TFJ_SOURCE_THE_FOOLS_JOURNEY">
+		<description>
+			<p>Homebrew items, spells and other content for THE FOOLS JOURNEY campaign.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">TFJ</set>
+			<set name="url">https://github.com/Snowder1/TFJ</set>
+			<set name="official">false</set>
+			<set name="homebrew">true</set>
+		</setters>
+	</element>
+</elements>

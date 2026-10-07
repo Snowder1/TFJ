@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>THE FOOLS JOURNEY - Magic Items</name>
+		<description>Homebrew magic items for THE FOOLS JOURNEY campaign.</description>
+		<update version="0.0.2">
+			<file name="tfj-magic-items.xml" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/tfj-magic-items.xml" />
+		</update>
+	</info>
+
+	<!-- ===================== SHIELD OF THE ORC WARLORD ===================== -->
+	<element name="Shield of the Orc Warlord" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_SHIELD_OF_THE_ORC_WARLORD">
+		<description>
+			<p>This shield grants the bearer the ability to use the Menacing Attack maneuver once per short or long rest without expending a superiority die. It also grants a +1 bonus to AC. This shield’s design resonates with Agamar’s heritage and prowess in battle.</p>
+			<p class="indent"><strong><em>Menacing Attack.</em></strong> When you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn. The DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (whichever is higher).</p>
+		</description>
+		<setters>
+			<set name="keywords">shield, orc, maneuver, menacing attack, frightened</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shield">Armor</set>
+			<!-- rarity was not given in the notes: Rare is a placeholder -->
+			<set name="rarity">Rare</set>
+			<set name="enhancement">1</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Shield of the Orc Warlord</set>
+		</setters>
+		<rules>
+			<stat name="ac:shield" value="1" bonus="enhancement" />
+		</rules>
+	</element>
+
+	<!-- ===================== THE ABYSSAL GAUNTLET OF IMPACT ===================== -->
+	<element name="The Abyssal Gauntlet of Impact" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_ABYSSAL_GAUNTLET_OF_IMPACT">
+		<description>
+			<p class="flavor">A gauntlet made of dark, crystalline scales, pulsing with internal energy. When worn, the user’s arm glows faintly with blue or purple lightning-like cracks. Runes in the shape of tentacles swirl across the surface, hinting at its abyssal origins.</p>
+			<p class="indent"><strong><em>Abyssal Descent.</em></strong> The gauntlet can unleash a powerful area-of-effect attack, mimicking the descent of a kraken into battle.</p>
+			<ul>
+				<li><strong>Activation:</strong> As an action, you leap up to 30 feet into the air and slam down onto a point you choose within 60 feet, causing a violent shockwave upon impact.</li>
+				<li><strong>Effect:</strong> All creatures within a 15-foot radius must succeed on a DC 18 Strength saving throw or take 6d10 force damage, be knocked prone, and suffer vulnerability to the next instance of bludgeoning, force, or thunder damage within the next round. On a success, targets take half damage and remain standing.</li>
+				<li><strong>Feature:</strong> If a creature’s hit points drop below 20% due to this effect, they are instantly incapacitated and trapped by shadowy tendrils until the end of your next turn.</li>
+				<li><strong>Recharge:</strong> This ability recharges after a long rest or when you score a critical hit with a melee weapon while attuned to the gauntlet.</li>
+			</ul>
+			<p class="indent"><strong><em>Ceaseless Surge.</em></strong> After activating Abyssal Descent, the gauntlet grants you a surge of abyssal power.</p>
+			<ul>
+				<li>You gain temporary hit points equal to half the damage dealt by the shockwave.</li>
+				<li>Until the end of your next turn, your speed increases by 10 feet and you have advantage on Strength-based ability checks.</li>
+				<li>If you reduce a creature to 0 hit points during this time, you can immediately move up to 20 feet as a free action without provoking opportunity attacks.</li>
+			</ul>
+			<p class="indent"><strong><em>Kraken’s Influence (Passive).</em></strong> The gauntlet subtly alters the battlefield, instilling fear in lesser foes.</p>
+			<ul>
+				<li>Creatures of CR 2 or lower within 30 feet of you must make a DC 14 Wisdom saving throw or become frightened for 1 minute whenever you use a damaging ability from the gauntlet. They can repeat the saving throw at the end of their turns.</li>
+				<li>Allies within range gain a morale boost, receiving a +2 bonus to saving throws against fear effects.</li>
+			</ul>
+			<p class="indent"><strong><em>Curse: Abyssal Hunger.</em></strong> The gauntlet is infused with the wrath of a long-forgotten abyssal entity and does not relinquish its power without a price.</p>
+			<ul>
+				<li><strong>Life-Leeching Strain:</strong> Each time you use Abyssal Descent, you must make a DC 16 Constitution saving throw or take 3d10 necrotic damage. This damage cannot be avoided or reduced.</li>
+				<li><strong>Unrelenting Will:</strong> The gauntlet occasionally acts of its own accord, compelling you to strike targets or leap into danger. When you roll initiative, roll a d10. On a roll of 1, you immediately move toward the nearest enemy and attempt an attack on your first turn without using a bonus action.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="keywords">gauntlet, abyssal, kraken, force, shockwave, cursed</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">hands</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="cursed">true</set>
+		</setters>
+	</element>
+
+	<!-- ===================== CHESTPLATE OF THE DAWN ===================== -->
+	<!-- Built on a Breastplate (AC 14 + Dex, max 2), so it ends up at 16 + Dex (max 2). -->
+	<element name="Chestplate of the Dawn" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_CHESTPLATE_OF_THE_DAWN">
+		<description>
+			<p class="flavor">Your heart burns with unwavering faith.</p>
+			<ul>
+				<li><strong>Bonus:</strong> +2 bonus to AC (in addition to the armor’s base AC), and resistance to necrotic and radiant damage.</li>
+				<li>When you are struck by a melee attack, the attacker takes radiant damage equal to your proficiency bonus.</li>
+				<li>Once per short rest, as a reaction when you are hit by an attack, you can reduce the damage by 1d10 + your Constitution modifier.</li>
+			</ul>
+			<p class="flavor"><strong>Visual:</strong> Etched with runes that glow like sunlight over a horizon, with a central crest showing two angelic wings guarding a sun.</p>
+		</description>
+		<setters>
+			<set name="keywords">breastplate, chestplate, dawn, radiant, necrotic, resistance</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">body</set>
+			<set name="type" addition="breastplate">Armor</set>
+			<!-- rarity was not given in the notes: Very Rare is a placeholder -->
+			<set name="rarity">Very Rare</set>
+			<set name="enhancement">2</set>
+			<set name="armor">Breastplate</set>
+			<set name="name-format">Chestplate of the Dawn</set>
+		</setters>
+		<rules>
+			<stat name="ac:armored:enhancement" value="2" bonus="enhancement" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+		</rules>
+	</element>
+
+	<!-- ===================== TITAN'S RUIN ===================== -->
+	<element name="Titan's Ruin – The Pebble-Powered Pummeler" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_TITANS_RUIN">
+		<description>
+			<p class="indent"><strong><em>Massive Impact.</em></strong> When you hit a creature with this hammer, it takes an additional 3d10 force damage, and creatures of smaller size must make a DC 18 Strength saving throw or be launched 10 feet per point of damage dealt in a random direction.</p>
+			<p class="indent"><strong><em>Kinetic Charge (Reload Mechanic).</em></strong> The hammer’s explosive power is fueled by Titan Pebbles—small but unnaturally dense magical stones. It comes with 3 Titan Pebbles.</p>
+			<ul>
+				<li>Each Kinetic Charge Attack (special attack action) expends one Titan Pebble, creating a shockwave that deals 8d10 thunder damage in a 30-foot radius (DC 18 Constitution saving throw for half damage; creatures that fail are knocked prone).</li>
+				<li>Reloading Titan Pebbles takes 1 minute per pebble, as they must be carefully placed into the hammer’s absurdly convoluted mechanism.</li>
+			</ul>
+			<p class="indent"><strong><em>Pebble Mishap.</em></strong> If you roll a natural 1 on an attack, roll a d6 to determine the malfunction:</p>
+			<table>
+				<thead>
+					<tr><td>d6</td><td>Malfunction</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>1–2</td><td><strong>Misfire!</strong> The hammer does nothing, but the pebble explodes in your hands, dealing 4d6 thunder damage to you.</td></tr>
+					<tr><td>3–4</td><td><strong>Backblast!</strong> You are launched 20 feet backwards and must make a DC 15 Dexterity saving throw or land prone.</td></tr>
+					<tr><td>5–6</td><td><strong>Power Surge!</strong> The hammer activates twice, causing an uncontrollable 40-foot shockwave, knocking you prone and launching all creatures within 40 feet 20 feet outward.</td></tr>
+				</tbody>
+			</table>
+			<p class="indent"><strong><em>Impractically Heavy.</em></strong> The hammer weighs 150 lb. Wielding it reduces your movement speed by 10 feet unless you have a Strength of 20 or higher.</p>
+			<p class="flavor">“It’s just a little hammer with a little pebble.” — A fool before being obliterated</p>
+		</description>
+		<setters>
+			<set name="keywords">maul, hammer, titan pebbles, force, thunder</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="150">150 lb.</set>
+			<set name="type" addition="maul">Weapon</set>
+			<set name="attunement" addition="by a creature with a Strength of 18 or higher">true</set>
+			<set name="rarity">Legendary</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_GROUP_MAULS</set>
+			<!-- the 3 charges track the Titan Pebbles -->
+			<set name="charges">3</set>
+			<set name="name-format">Titan's Ruin</set>
+		</setters>
+		<rules>
+			<!-- Impractically Heavy: -10 ft speed while equipped, unless Strength is 20 or higher -->
+			<stat name="speed" value="-10" requirements="![str:20]" />
+		</rules>
+	</element>
+
+	<!-- ===================== EMERALD OF SHADOW SIGHT ===================== -->
+	<element name="Emerald of Shadow Sight" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_EMERALD_OF_SHADOW_SIGHT">
+		<description>
+			<p>This deep green emerald shimmers with a faint, eerie glow when held up to the light. It grants the user darkvision up to 60 feet and the ability to see through magical darkness. Its rarity and utility in both combat and stealth make it highly sought after by rogues and spellcasters alike.</p>
+		</description>
+		<setters>
+			<set name="keywords">emerald, gem, darkvision, magical darkness</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">1500</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<!-- rarity was not given in the notes: Rare is a placeholder (fits its 1,500 gp value) -->
+			<set name="rarity">Rare</set>
+		</setters>
+		<rules>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+		</rules>
+	</element>
+
+	<!-- ===================== MAW OF THE ENDLESS FEAST ===================== -->
+	<element name="Maw of the Endless Feast" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_MAW_OF_THE_ENDLESS_FEAST">
+		<description>
+			<p class="flavor">A grotesque helm with a shifting, tooth-filled mouth.</p>
+			<ul>
+				<li>When you reduce a creature to 0 hit points, you gain temporary hit points equal to 2d10 + your level.</li>
+				<li>As a bonus action, you can consume a corpse within 5 feet of you to regain 3d8 hit points.</li>
+				<li>Once per day, you can cast <em>vampiric touch</em>. For you, it requires no concentration and lasts 1 minute.</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="keywords">helm, helmet, maw, feast, temporary hit points, vampiric touch</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">head</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+
+	<!-- ===================== GORGET OF THE ENDLESS MAW ===================== -->
+	<element name="Gorget of the Endless Maw" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_GORGET_OF_THE_ENDLESS_MAW">
+		<description>
+			<p class="flavor">A thick, fleshy collar fused with jagged teeth on the inside. It occasionally swallows nothing.</p>
+			<ul>
+				<li>You have resistance to necrotic damage.</li>
+				<li>When you deal melee damage, you can force the target to make a Constitution saving throw. On a failure, you tear vitality from it, dealing an extra 2d8 necrotic damage and regaining hit points equal to that amount. You can use this a number of times equal to your proficiency bonus, and you regain all uses when you finish a long rest.</li>
+				<li>When a creature dies within 10 feet of you, you can use your reaction to consume its essence. You gain 2d10 temporary hit points and a +1 bonus to attack rolls for 1 minute (this bonus stacks, up to +3).</li>
+			</ul>
+			<p class="indent"><strong><em>Curse – Feast Without End.</em></strong></p>
+			<ul>
+				<li>If a creature dies within 10 feet of you and you do not consume it, you take 3d6 psychic damage.</li>
+				<li>At the start of combat, make a DC 15 Wisdom saving throw. On a failure, you are driven to feed obsessively: you must move toward the nearest wounded creature each turn, and if you are adjacent to a creature below half its hit points, you must attack it.</li>
+				<li>If you go a full day without consuming a creature’s essence, you gain 1 level of exhaustion and have disadvantage on all attack rolls until you feed again.</li>
+				<li>If you consume essence 3 turns in a row, you enter a frenzy: you gain advantage on melee attacks, but you must attack every turn, prioritizing the nearest creature (including allies).</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="keywords">gorget, collar, maw, necrotic, resistance, cursed</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">neck</set>
+			<set name="type">Wondrous Item</set>
+			<!-- rarity was not given in the notes: Very Rare is a placeholder -->
+			<set name="rarity">Very Rare</set>
+			<set name="cursed">true</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+		</rules>
+	</element>
+
+	<!-- ===================== SWORD OF THE EGO ===================== -->
+	<element name="Sword of the Ego" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_SWORD_OF_THE_EGO">
+		<description>
+			<p class="flavor">This imposing longsword has a mirror-like blade that gleams with an aura of self-confidence. The hilt is ornately decorated with gold and silver, and the pommel features a gemstone that seems to pulse with a faint, self-assured glow. Wielding the Sword of the Ego makes the bearer feel invincible.</p>
+			<p class="indent"><strong><em>Magical Weapon.</em></strong> The Sword of the Ego grants a +2 bonus to attack and damage rolls made with it.</p>
+			<p class="indent"><strong><em>Aura of Confidence.</em></strong> While attuned to this weapon, the wielder has advantage on Charisma checks (Intimidation and Persuasion) but disadvantage on Wisdom checks (Insight) and saving throws against being charmed or frightened.</p>
+			<p class="indent"><strong><em>Prideful Strike.</em></strong> Once per short rest, the wielder can declare a Prideful Strike before making an attack roll. On a hit, the attack deals an extra 2d6 psychic damage, and the target must succeed on a DC 15 Wisdom saving throw or be compelled to speak truthfully for the next minute. However, if the attack misses, the wielder becomes blinded by their own ego until the end of their next turn (blinded condition).</p>
+		</description>
+		<setters>
+			<set name="keywords">longsword, ego, pride, psychic</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="longsword">Weapon</set>
+			<set name="attunement">true</set>
+			<!-- rarity was not given in the notes: Rare is a placeholder -->
+			<set name="rarity">Rare</set>
+			<set name="enhancement">2</set>
+			<set name="weapon">Longsword</set>
+			<set name="name-format">Sword of the Ego</set>
+		</setters>
+	</element>
+
+	<!-- ===================== MMMM-MUNCH BOW ===================== -->
+	<element name="Mmmm-Munch Bow" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_MMMM_MUNCH_BOW">
+		<description>
+			<p class="flavor">This unique longbow has a whimsical design with candy-like decorations on its limbs and a glossy, colorful finish that resembles a sweet treat. The bowstring is made from an unusual material that hums faintly, like a distant tune.</p>
+			<p class="indent">Every time you make an attack with this bow, you must say "Mmm, I'm eating, bro!" (or something similar). If you do, the arrow flies with surprising speed and accuracy, granting a +1 bonus to attack rolls.</p>
+			<p class="indent"><strong><em>Sugar Rush.</em></strong> Once per day, you can fire an arrow that bursts into a cloud of sweet-smelling mist upon impact, creating an area of Sugar Rush within a 10-foot radius. Creatures in the area must succeed on a DC 14 Constitution saving throw or become hyperactive, gaining advantage on Dexterity checks and disadvantage on Wisdom checks for 1 minute.</p>
+			<p class="indent"><strong><em>Curse.</em></strong> Unknown.</p>
+		</description>
+		<setters>
+			<set name="keywords">longbow, candy, sugar rush, cursed</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="longbow">Weapon</set>
+			<!-- rarity was not given in the notes: Uncommon is a placeholder -->
+			<set name="rarity">Uncommon</set>
+			<set name="cursed">true</set>
+			<set name="weapon">Longbow</set>
+			<set name="name-format">Mmmm-Munch Bow</set>
+		</setters>
+	</element>
+
+	<!-- ===================== CLOAK OF SHADOWS ===================== -->
+	<element name="Cloak of Shadows" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_CLOAK_OF_SHADOWS">
+		<description>
+			<p class="flavor">A tattered black cloak that seems to absorb light.</p>
+			<p class="indent">While wearing this cloak, you have advantage on Dexterity (Stealth) checks, and you can cast <em>invisibility</em> once per day.</p>
+			<p class="indent"><strong><em>Curse.</em></strong> Unknown.</p>
+		</description>
+		<setters>
+			<set name="keywords">cloak, shadow, stealth, invisibility, cursed</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">shoulders</set>
+			<set name="type">Wondrous Item</set>
+			<!-- rarity was not given in the notes: Rare is a placeholder -->
+			<set name="rarity">Rare</set>
+			<set name="cursed">true</set>
+		</setters>
+	</element>
+
+	<!-- ===================== EYE OF TRUE SIGHT ===================== -->
+	<element name="Eye of True Sight" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_EYE_OF_TRUE_SIGHT">
+		<description>
+			<p class="flavor">A small black-red eye.</p>
+			<p class="indent">You have truesight out to a range of 30 feet.</p>
+			<p class="indent"><strong><em>Curse.</em></strong> The wearer is cursed with the Eye of True Sight. They are constantly aware of the presence of invisible or hidden creatures, which imposes disadvantage on Perception checks due to overwhelming sensory input. Additionally, they are unable to avert their gaze, giving them disadvantage on saving throws against gaze attacks (such as a basilisk's petrifying gaze).</p>
+		</description>
+		<setters>
+			<set name="keywords">eye, truesight, cursed</set>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="type">Wondrous Item</set>
+			<!-- rarity was not given in the notes: Rare is a placeholder -->
+			<set name="rarity">Rare</set>
+			<set name="cursed">true</set>
+		</setters>
+	</element>
+</elements>
