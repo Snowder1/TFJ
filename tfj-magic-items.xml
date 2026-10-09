@@ -3,7 +3,7 @@
 	<info>
 		<name>THE FOOLS JOURNEY - Magic Items</name>
 		<description>Homebrew magic items for THE FOOLS JOURNEY campaign.</description>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="tfj-magic-items.xml" url="https://raw.githubusercontent.com/Snowder1/TFJ/main/tfj-magic-items.xml" />
 		</update>
 	</info>
@@ -72,7 +72,7 @@
 	</element>
 
 	<!-- ===================== CHESTPLATE OF THE DAWN ===================== -->
-	<!-- Built on a Breastplate (AC 14 + Dex, max 2), so it ends up at 16 + Dex (max 2). -->
+	<!-- Built on Plate (AC 18), so it ends up at AC 20. -->
 	<element name="Chestplate of the Dawn" type="Magic Item" source="THE FOOLS JOURNEY" id="ID_TFJ_MAGIC_ITEM_CHESTPLATE_OF_THE_DAWN">
 		<description>
 			<p class="flavor">Your heart burns with unwavering faith.</p>
@@ -84,15 +84,15 @@
 			<p class="flavor"><strong>Visual:</strong> Etched with runes that glow like sunlight over a horizon, with a central crest showing two angelic wings guarding a sun.</p>
 		</description>
 		<setters>
-			<set name="keywords">breastplate, chestplate, dawn, radiant, necrotic, resistance</set>
+			<set name="keywords">plate, chestplate, dawn, radiant, necrotic, resistance</set>
 			<set name="category">Magic Armor</set>
 			<set name="cost" currency="gp">0</set>
 			<set name="slot">body</set>
-			<set name="type" addition="breastplate">Armor</set>
+			<set name="type" addition="plate">Armor</set>
 			<!-- rarity was not given in the notes: Very Rare is a placeholder -->
 			<set name="rarity">Very Rare</set>
 			<set name="enhancement">2</set>
-			<set name="armor">Breastplate</set>
+			<set name="armor">Plate</set>
 			<set name="name-format">Chestplate of the Dawn</set>
 		</setters>
 		<rules>
